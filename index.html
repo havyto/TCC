@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameZone - Login</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/auth.css">
+    <title>GameZone</title>
+    <link rel="stylesheet" href="ASSETS/CSS/style.css">
 </head>
 <body>
     <nav id="header">
         <div class="logo">
-            <h1>GameZone</h1>
+            <img src="assets/imagens/logo.png" alt="GameZone Logo">
         </div>
+        <form id="search-form">
+            <input type="text" placeholder="🔍 Pesquisar jogos, DLCs, etc." aria-label="Search">
+        </form>
         <ul class="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="loja.html">Loja</a></li>
@@ -20,104 +22,112 @@
         </ul>
     </nav>
 
-    <div class="login-container">
-        <div class="login-box">
-            <div class="login-header">
-                <h2>Fazer Login</h2>
-                <p>Entre na sua conta para acessar sua biblioteca de jogos</p>
-            </div>
-            
-            <form id="login-form">
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" placeholder="Seu endereço de e-mail" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="password">Senha</label>
-                    <input type="password" id="password" placeholder="Sua senha" required>
-                </div>
-                
-                <button type="submit" class="login-button">Entrar</button>
-                
-                <div class="login-options">
-                    <div class="remember-me">
-                        <input type="checkbox" id="remember">
-                        <label for="remember">Lembrar-me</label>
+    <main class="main-content">
+        <!-- Banner de Destaque -->
+        <section class="featured-banner">
+            <h2>Fabled Woods</h2>
+            <button class="buy-button">Comprar Agora</button>
+        </section>
+
+        <!-- Mais Vendidos -->
+        <section class="game-section">
+            <h3 class="section-title">Mais Vendidos</h3>
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="game-image">Cyber Rift</div>
+                    <div class="game-info">
+                        <h4 class="game-title">Cyber Rift</h4>
+                        <p class="game-price">$29.03</p>
                     </div>
-                    <a href="#" class="forgot-password">Esqueci minha senha</a>
                 </div>
-            </form>
-            
-            <div class="separator">
-                <span>Ou</span>
+                <div class="game-card">
+                    <div class="game-image">Fantaxy Quest</div>
+                    <div class="game-info">
+                        <h4 class="game-title">Fantaxy Quest</h4>
+                        <p class="game-price">$224,79</p>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="game-image">Dark Fortress</div>
+                    <div class="game-info">
+                        <h4 class="game-title">Dark Fortress</h4>
+                        <p class="game-price">$10,90</p>
+                    </div>
+                </div>
             </div>
-            
-            <div class="social-login">
-                <button class="social-btn google-btn">
-                    <span class="social-icon">G</span>
-                    Entrar com Google
-                </button>
-                
-                <button class="social-btn facebook-btn">
-                    <span class="social-icon">f</span>
-                    Entrar com Facebook
-                </button>
-            </div>
-            
-            <div class="register-link">
-                Não tem uma conta? <a href="registro.html">Cadastre-se agora</a>
-            </div>
-        </div>
-    </div>
+        </section>
 
-    <footer id="main-footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>GameZone</h3>
-                <p>A melhor plataforma para gamers</p>
+        <!-- Novos Lançamentos -->
+        <section class="game-section">
+            <h3 class="section-title">Novos Lançamentos</h3>
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="game-image">Ocean Depths</div>
+                    <div class="game-info">
+                        <h4 class="game-title">Ocean Depths</h4>
+                        <p class="game-price">$14.95</p>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="game-image">Galaxy War</div>
+                    <div class="game-info">
+                        <h4 class="game-title">Galaxy War</h4>
+                        <p class="game-price">$8.75</p>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="game-image">Mythic Adventure 17</div>
+                    <div class="game-info">
+                        <h4 class="game-title">Mythic Adventure 17</h4>
+                        <p class="game-price">$3.91</p>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="game-image">Hive</div>
+                    <div class="game-info">
+                        <h4 class="game-title">Hive</h4>
+                        <p class="game-price">$1201</p>
+                    </div>
+                </div>
             </div>
-            
-            <div class="footer-section">
-                <h4>Links Rápidos</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="loja.html">Loja</a></li>
-                    <li><a href="biblioteca.html">Biblioteca</a></li>
-                    <li><a href="suporte.html">Suporte</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Suporte</h4>
-                <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contato</a></li>
-                    <li><a href="#">Políticas</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Newsletter</h4>
-                <p>Inscreva-se para receber novidades</p>
-                <form id="newsletter-form">
-                    <input type="email" placeholder="Seu e-mail" required>
-                    <button type="submit">Inscrever</button>
-                </form>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2023 GameZone. Todos os direitos reservados.</p>
-            <div class="social-links">
-                <a href="#" class="social-link">Facebook</a>
-                <a href="#" class="social-link">Twitter</a>
-                <a href="#" class="social-link">Instagram</a>
-            </div>
-        </div>
-    </footer>
+        </section>
 
-    <script src="js/auth.js"></script>
-    <script src="js/footer.js"></script>
+        <!-- Jogos Gratuitos -->
+        <section class="game-section">
+            <h3 class="section-title">Jogos Gratuitos</h3>
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="game-image">Arcane Legends</div>
+                    <div class="game-info">
+                        <h4 class="game-title">Arcane Legends</h4>
+                        <p class="free-badge">Grátis</p>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="game-image">Rogue Assault</div>
+                    <div class="game-info">
+                        <h4 class="game-title">Rogue Assault</h4>
+                        <p class="free-badge">Grátis</p>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="game-image">HiveZombie Siege</div>
+                    <div class="game-info">
+                        <h4 class="game-title">HiveZombie Siege</h4>
+                        <p class="free-badge">Grátis</p>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="game-image">Promoção</div>
+                    <div class="game-info">
+                        <h4 class="game-title">Jogo em Promoção</h4>
+                        <p class="game-price">$30,11 <span class="discount-badge">36%</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+     <script src="ASSETS/JS/script.js"></script>
 </body>
 </html>
