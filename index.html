@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone - Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <nav id="header">
+        <div class="logo">
+            <h1>GameZone</h1>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="loja.html">Loja</a></li>
+            <li><a href="biblioteca.html">Biblioteca</a></li>
+            <li><a href="suporte.html">Suporte</a></li>
+        </ul>
+    </nav>
+
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <h2>Fazer Login</h2>
+                <p>Entre na sua conta para acessar sua biblioteca de jogos</p>
+            </div>
+            
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="Seu endereço de e-mail" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="Sua senha" required>
+                </div>
+                
+                <button type="submit" class="login-button">Entrar</button>
+                
+                <div class="login-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Lembrar-me</label>
+                    </div>
+                    <a href="#" class="forgot-password">Esqueci minha senha</a>
+                </div>
+            </form>
+            
+            <div class="separator">
+                <span>Ou</span>
+            </div>
+            
+            <div class="social-login">
+                <button class="social-btn google-btn">
+                    <span class="social-icon">G</span>
+                    Entrar com Google
+                </button>
+                
+                <button class="social-btn facebook-btn">
+                    <span class="social-icon">f</span>
+                    Entrar com Facebook
+                </button>
+            </div>
+            
+            <div class="register-link">
+                Não tem uma conta? <a href="registro.html">Cadastre-se agora</a>
+            </div>
+        </div>
+    </div>
+
+    <footer id="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>GameZone</h3>
+                <p>A melhor plataforma para gamers</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="loja.html">Loja</a></li>
+                    <li><a href="biblioteca.html">Biblioteca</a></li>
+                    <li><a href="suporte.html">Suporte</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Suporte</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Políticas</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Inscreva-se para receber novidades</p>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Seu e-mail" required>
+                    <button type="submit">Inscrever</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 GameZone. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+</html>
