@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="ASSETS/CSS/style.css">
+</head>
+<body>
+    <nav id="header">
+        <div class="logo">
+            <img src="ASSETS/IMAGENS/logo(1).png" alt="GameZone Logo">
+        </div>
+        <form id="search-form">
+            <input type="text" placeholder="🔍 Pesquisar jogos, DLCs, etc." aria-label="Search">
+        </form>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="loja.html">Loja</a></li>
+            <li><a href="biblioteca.html">Biblioteca</a></li>
+            <li><a href="suporte.html">Suporte</a></li>
+        </ul>
+        <button type="button" id="btn-entrar" class="login-button">ENTRAR</button>
+    </nav>
+
+    <main class="main-content">
+        <!-- Banner de Destaque -->
+        <section class="featured-banner">
+            <h2>Fabled Woods</h2>
+            <button class="buy-button">Comprar Agora</button>
+        </section>
+
+        <!-- Mais Vendidos -->
+        <section class="game-section">
+            <h3 class="section-title">Mais Vendidos</h3>
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="game-image">Cyber Rift</div>
+                    <div class="game-info">
+                        <h4 class="game-title">Cyber Rift</h4>
+                        <p class="game-price">$29.03</p>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="game-image">Fantaxy Quest</div>
+                    <div class="game-info">
+                        <h4 class="game-title">Fantaxy Quest</h4>
+                        <p class="game-price">$224,79</p>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="game-image">Dark Fortress</div>
+                    <div class="game-info">
+                        <h4 class="game-title">Dark Fortress</h4>
+                        <p class="game-price">$10,90</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Novos Lançamentos -->
+        <section class="game-section">
+            <h3 class="section-title">Novos Lançamentos</h3>
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="game-image">Ocean Depths</div>
+                    <div class="game-info">
+                        <h4 class="game-title">Ocean Depths</h4>
+                        <p class="game-price">$14.95</p>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="game-image">Galaxy War</div>
+                    <div class="game-info">
+                        <h4 class="game-title">Galaxy War</h4>
+                        <p class="game-price">$8.75</p>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="game-image">Mythic Adventure 17</div>
+                    <div class="game-info">
+                        <h4 class="game-title">Mythic Adventure 17</h4>
+                        <p class="game-price">$3.91</p>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="game-image">Hive</div>
+                    <div class="game-info">
+                        <h4 class="game-title">Hive</h4>
+                        <p class="game-price">$1201</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jogos Gratuitos -->
+        <section class="game-section">
+            <h3 class="section-title">Jogos Gratuitos</h3>
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="game-image">Arcane Legends</div>
+                    <div class="game-info">
+                        <h4 class="game-title">Arcane Legends</h4>
+                        <p class="free-badge">Grátis</p>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="game-image">Rogue Assault</div>
+                    <div class="game-info">
+                        <h4 class="game-title">Rogue Assault</h4>
+                        <p class="free-badge">Grátis</p>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="game-image">HiveZombie Siege</div>
+                    <div class="game-info">
+                        <h4 class="game-title">HiveZombie Siege</h4>
+                        <p class="free-badge">Grátis</p>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="game-image">Promoção</div>
+                    <div class="game-info">
+                        <h4 class="game-title">Jogo em Promoção</h4>
+                        <p class="game-price">$30,11 <span class="discount-badge">36%</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!-- Conteúdo do footer aqui -->
+    </footer>
+
+    <!-- Modal de Login -->
+    <div id="modal-login" class="modal">
+        <div class="text-center">
+        </div>
+        <p class="text-center title">Entre na Gamezone</p>
+        <div class="input-group">
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email" class="input" value="" placeholder="Informe o seu E-mail">
+        </div>
+        <div class="input-group">
+            <label for="password">Senha:</label>
+            <input type="password" name="senha" id="senha" class="input" value="" placeholder="Informe sua senha">
+        </div>
+        <div class="text-right">
+            <span class="cursor-pointer" id="bt-modal-nova-cnta">Sua primeira vez aqui? Criar Conta</span>
+        </div>
+        <div style="margin-top: 25px;"></div>
+        <button id="btn-login" class="button">ENTRAR</button>
+        <div style="margin-top: 10px;"></div>
+        <a rel="modal:close" class="display-block text-center cursor-pointer">CANCELAR</a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="ASSETS/JAVASCRIPT/script.js"></script>
+
+</body>
+</html>
