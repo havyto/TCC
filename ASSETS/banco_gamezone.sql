@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 03-Out-2025 às 03:10
+-- Generation Time: 07-Out-2025 às 21:19
 -- Versão do servidor: 5.6.15-log
 -- PHP Version: 5.5.8
 
@@ -19,6 +19,39 @@ SET time_zone = "+00:00";
 --
 -- Database: `banco_gamezone`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `biblioteca`
+--
+
+CREATE TABLE IF NOT EXISTS `biblioteca` (
+  `LIB_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `GAME_ID` int(11) DEFAULT NULL,
+  `USER_ID` int(11) DEFAULT NULL,
+  PRIMARY KEY (`LIB_ID`),
+  KEY `GAME_ID` (`GAME_ID`),
+  KEY `USER_ID` (`USER_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `compra`
+--
+
+CREATE TABLE IF NOT EXISTS `compra` (
+  `COMPRA_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `GAME_ID` int(11) DEFAULT NULL,
+  `USER_ID` int(11) DEFAULT NULL,
+  `DATA_AQUISICAO` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `GAME_PRECO` decimal(5,2) DEFAULT NULL,
+  `METODO_PAG` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`COMPRA_ID`),
+  KEY `GAME_ID` (`GAME_ID`),
+  KEY `USER_ID` (`USER_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -62,8 +95,10 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `USER_DTNASC` date NOT NULL,
   `GAME_ID` int(11) DEFAULT NULL,
   `USER_EMAIL` varchar(100) DEFAULT NULL,
+  `LIB_ID` int(11) DEFAULT NULL,
   PRIMARY KEY (`USER_ID`),
-  KEY `GAME_ID` (`GAME_ID`)
+  KEY `GAME_ID` (`GAME_ID`),
+  KEY `LIB_ID` (`LIB_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
